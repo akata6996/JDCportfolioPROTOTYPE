@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Law - John D. Cadore, P.A.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="header-left">
+            <h1>John D. Cadore, P.A.</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="profpage.html">Attorney Profile</a></li>
+                <li><a href="divorce.html">Divorce</a></li>
+                <li><a href="familylaw.html">Family Law</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section id="family-law" class="fade-in-hidden">
+        <div class="container">
+            <h2>Family Law Services</h2>
+            <p>
+                We specialize in all aspects of family law, including custody disputes, child support, and prenuptial agreements.
+                At John D. Cadore, P.A., we are committed to protecting your family's best interests while providing personalized legal solutions.
+            </p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 John D. Cadore, P.A. All Rights Reserved.</p>
+    <div class="contact-info">
+        <p>CALL FOR YOUR FREE CASE EVALUATION</p>
+        <p>Email: info@johndcadore.com</p>
+        <p>Phone: (607) 725-2150</p>
+    </div>
+</footer>
+
+<div class="watermark">PROTOTYPE VER.</div>
+
+<script src="scripts.js"></script>
+<script>
+    // Function to check if an element is in the viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+
+    // Function to add the animation class when the element is in view
+    function handleScrollAnimation() {
+        const sections = document.querySelectorAll('.fade-in-hidden');
+        sections.forEach((section) => {
+            if (isElementInViewport(section)) {
+                section.classList.add('fadeInUp'); // Trigger animation when section is in view
+                section.classList.remove('fade-in-hidden'); // Remove the initial hidden state
+            }
+        });
+    }
+
+    // Run handleScrollAnimation on scroll and page load
+    window.addEventListener('scroll', handleScrollAnimation);
+    window.addEventListener('load', handleScrollAnimation);
+
+    // Trigger the initial check in case of immediate visibility
+    handleScrollAnimation();
+</script>
+
+</body>
+</html>

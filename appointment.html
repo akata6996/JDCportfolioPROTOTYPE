@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointments - Kurt Waldhime T. Arellano</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Appointments</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="profpage.html">Attorney Profile</a></li>
+                <li><a href="divorce.html">Divorce</a></li>
+                <li><a href="familylaw.html">Family Law</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="appointments">
+        <p>Schedule a meeting with me by filling out the form below:</p>
+         <form action="https://formsubmit.co/arellanokurt848@gmail.com?return=index.html" method="POST" target="_blank" onsubmit="refreshPage()">
+            <label for="name">Name:</label>
+            <input type="text" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+            
+            <label for="appointment-date">Appointment Date:</label>
+            <input type="date" name="appointment-date" required>
+            
+            <label for="appointment-time">Appointment Time:</label>
+            <input type="time" name="appointment-time" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit" class="btn">Submit</button>
+        </form>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 John D. Cadore, P.A. All Rights Reserved.</p>
+        <div class="contact-info">
+            <p>CALL FOR YOUR FREE CASE EVALUATION</p>
+            <p>Email: info@johndcadore.com</p>
+            <p>Phone: (607) 725-2150</p>
+        </div>
+    </footer>
+
+    <div class="watermark">PROTOTYPE VER.</div>
+</body>
+</html>
